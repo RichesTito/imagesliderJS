@@ -1,0 +1,68 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            align-content: center;
+        }
+        button{
+            margin-top: 170px;
+            float: left;
+            height: 50px;
+            color: red;
+            border-radius: 20px;
+            border: 2px solid black;
+            background-color: aqua;
+        }
+        img{
+            float: left;
+            margin-top: 30px;
+            margin-right: 10px;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+    <div>
+ <button onclick="prev()">PREV</button> 
+ <img src="images/developer.jpg" id="slider" alt="" width="80%" height="80%">
+ <button onclick="next()">NEXT</button>  
+</div>
+</center>
+ <script>
+var images = [
+    'images/developer.jpg',
+    'images/alex.jpg',
+    'images/coders.jpg',
+    'images/coders.jpg',
+    'images/jesus.jpg',
+    'images/dooley.jpg',
+    'images/maxwell.jpg',
+    'images/muha.jpg',
+    'images/nes.jpg'
+];
+var num =0;
+function next(){
+    var slider = document.getElementById('slider');
+    num++;
+    if(num >=images.length){
+        num = 0;
+    }
+    slider.src=images[num];
+}
+
+function prev(){
+    var slider = document.getElementById('slider');
+    num--;
+    if(num <images.length-1){
+        
+    }
+    slider.src=images[num];
+}
+
+ </script>
+</body>
+</html>
